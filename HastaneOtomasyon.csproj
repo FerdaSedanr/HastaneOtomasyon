@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC077F39-FA68-4260-9C14-CD459004C57E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HastaneOtomasyon</RootNamespace>
+    <AssemblyName>HastaneOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itextsharp.pdfa.5.5.13.3\lib\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\itextsharp.xmlworker.5.5.13.3\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBHastaneOtomasyonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBHastaneOtomasyonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBHastaneOtomasyonDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBHastaneOtomasyonDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorEkrani.Designer.cs">
+      <DependentUpon>DoktorEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoktorGirisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoktorGirisYap.Designer.cs">
+      <DependentUpon>DoktorGirisYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcilisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcilisEkrani.Designer.cs">
+      <DependentUpon>AcilisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.Designer.cs">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafikler.Designer.cs">
+      <DependentUpon>Grafikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaGoruntuleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HastaGoruntuleme.Designer.cs">
+      <DependentUpon>HastaGoruntuleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanicilar.Designer.cs">
+      <DependentUpon>Kullanicilar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PoliklinikIslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PoliklinikIslemleri.Designer.cs">
+      <DependentUpon>PoliklinikIslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandevuKayitlari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuKayitlari.Designer.cs">
+      <DependentUpon>RandevuKayitlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RandevuOlustur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RandevuOlustur.Designer.cs">
+      <DependentUpon>RandevuOlustur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SekreterEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SekreterEkranı.Designer.cs">
+      <DependentUpon>SekreterEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SekreterGirisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SekreterGirisYap.Designer.cs">
+      <DependentUpon>SekreterGirisYap.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AcilisEkrani.resx">
+      <DependentUpon>AcilisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorEkrani.resx">
+      <DependentUpon>DoktorEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoktorGirisYap.resx">
+      <DependentUpon>DoktorGirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisEkrani.resx">
+      <DependentUpon>GirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafikler.resx">
+      <DependentUpon>Grafikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HastaGoruntuleme.resx">
+      <DependentUpon>HastaGoruntuleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kullanicilar.resx">
+      <DependentUpon>Kullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PoliklinikIslemleri.resx">
+      <DependentUpon>PoliklinikIslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RandevuKayitlari.resx">
+      <DependentUpon>RandevuKayitlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RandevuOlustur.resx">
+      <DependentUpon>RandevuOlustur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SekreterEkranı.resx">
+      <DependentUpon>SekreterEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SekreterGirisYap.resx">
+      <DependentUpon>SekreterGirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DBHastaneOtomasyonDataSet.xsc">
+      <DependentUpon>DBHastaneOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBHastaneOtomasyonDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBHastaneOtomasyonDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBHastaneOtomasyonDataSet.xss">
+      <DependentUpon>DBHastaneOtomasyonDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBHastaneOtomasyonDataSet1.xsc">
+      <DependentUpon>DBHastaneOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DBHastaneOtomasyonDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBHastaneOtomasyonDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBHastaneOtomasyonDataSet1.xss">
+      <DependentUpon>DBHastaneOtomasyonDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{698180cd-7e82-49e8-8b58-eba0d6f4348b}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{acc5e694-e242-431d-8854-868d85a30c25}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicLayer\LogicLayer.csproj">
+      <Project>{5754a49c-cddf-4992-9945-020e8ef45308}</Project>
+      <Name>LogicLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
